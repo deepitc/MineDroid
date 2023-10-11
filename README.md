@@ -24,9 +24,10 @@ This Minesweeper Android application is a class project from Mobile Software Dev
 
 ## Screenshots
 
-![Screenshot 1](gameplay.jpeg)
+<img src="gameplay.jpeg" alt="Screenshot 1" width="20%" height="20%" />
 
-![Screenshot 2](loss.jpeg)
+
+<img src="gameplay.jpeg" alt="Screenshot 2" width="20%" height="20%" />
 
 ## Contributing
 
