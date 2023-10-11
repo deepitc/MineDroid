@@ -179,6 +179,9 @@ class MinesweeperGrid(context: Context, attrs: AttributeSet) : GridLayout(contex
                 cell.setBackgroundColor(Color.parseColor(context.getString(R.string.steel_blue)) )// Reset to original cell color
                 flagsRemaining++
             }
+
+            if(flagsRemaining==0)
+                showMessage(context.getString(R.string.game_won_message))
         }
     }
 
