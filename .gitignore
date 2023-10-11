@@ -1,24 +1,121 @@
-# Compiled class file
+# Built application files
+*.apk
+*.ap_
+
+# Files for the Dalvik VM
+*.dex
+
+# Java class files
 *.class
 
-# Log file
+# Generated files
+bin/
+gen/
+out/
+
+# Gradle files
+.gradle/
+build/
+
+# Local configuration file (e.g., workspace.xml)
+.idea/
+
+# Android Studio files
+*.iml
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/gradle.xml
+.idea/caches/
+
+# User-specific files
 *.log
+*.iml
+.idea/navEditor.xml
+.idea/assetWizardSettings.xml
 
-# BlueJ files
-*.ctxt
+# OS-generated files
+.DS_Store
+Thumbs.db
 
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
+# Windows folder configuration files
+Desktop.ini
 
-# Package Files #
-*.jar
-*.war
-*.nar
-*.ear
-*.zip
-*.tar.gz
-*.rar
+# Android Studio Navigation editor temp files
+.navigation/
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
-replay_pid*
+# Proguard files
+proguard-android.txt
+proguard-rules.pro
+
+# Crashlytics configuations
+crashlytics.properties
+
+# Signing config
+signingConfig.json
+
+# External native build folder generated in Android Studio 2.2 and later
+.externalNativeBuild
+
+# Google App Engine local run file
+appengine-web.xml
+
+# Android Studio 4.1+ serialized cache file
+.navigation/
+
+# SonarLint folder
+.sonarlint/
+
+# Uncomment if you're using AppCenter for build, testing, and deployment
+# AppCenter config file
+appcenter-config.json
+
+# Keystore files
+*.jks
+
+# lint
+lint/ 
+
+# Log Files
+*.log
+logs/
+
+# Android
+captures/
+proguard/
+ 
+# Crashlytics
+com_crashlytics_export_strings.xml
+crashlytics-build.properties
+crashlytics.properties
+
+# Navigation editor
+navigation/
+
+# Room
+room/
+
+# Build files
+build/
+
+# Local configuration file (e.g., .editorconfig)
+.editorconfig
+
+# Gradle wrapper files
+gradle-wrapper.properties
+gradle-wrapper.jar
+
+# React Native
+node_modules/
+android/app/build/
+
+# Fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+fastlane/test_output
+
+# Firebase
+.firebase/
+
+# Crash reports
+com_android_tools_build-apkzips/
