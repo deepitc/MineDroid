@@ -18,11 +18,11 @@ class MineCell(context: Context) : androidx.appcompat.widget.AppCompatButton(con
     fun reveal() {
         isRevealed = true
         isEnabled = false
-        if (isMine or text.equals("F")) {
+        if (isMine or text.equals(context.getString(R.string.Flag_string))) {
             setBackgroundColor(Color.RED)
-            text = "X"
+            text = context.getString(R.string.Mine_string)
         } else {
-            setBackgroundColor(Color.parseColor("#B0C4DE")) // Light Steel Blue
+            setBackgroundColor(Color.parseColor(context.getString(R.string.steel_blue))) // Light Steel Blue
             if (text.isNotEmpty()) {
                 when (text.toString().toInt()) {
                     1 -> setTextColor(Color.BLUE)

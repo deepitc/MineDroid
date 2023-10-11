@@ -119,3 +119,6 @@ fastlane/test_output
 
 # Crash reports
 com_android_tools_build-apkzips/
+
+# Local Files
+local/

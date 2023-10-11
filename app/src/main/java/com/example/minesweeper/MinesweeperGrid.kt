@@ -98,7 +98,7 @@ class MinesweeperGrid(context: Context, attrs: AttributeSet) : GridLayout(contex
                 val newCol = col + j
                 if (newRow in 0 until numRows && newCol in 0 until numCols) {
                     val cell = grid[newRow][newCol]
-                    if (!cell.isMine && !cell.isRevealed && cell.text == "") {
+                    if (!cell.isMine && !cell.isRevealed && cell.text == context.getString(R.string.empty_string)) {
                         cell.reveal()
                         revealedCount++
                         revealEmptyCells(newRow, newCol) // Recursive call to reveal adjacent empty cells
@@ -129,7 +129,7 @@ class MinesweeperGrid(context: Context, attrs: AttributeSet) : GridLayout(contex
 
         if (cell.isMine) {
             revealMines()
-            showGameOverMessage(context.getString(R.string.game_over_message_case1))
+            showMessage(context.getString(R.string.game_over_message_case1))
         }  else if (cell.text == "") {
             calculateAdjacentMines()
             cell.reveal()
@@ -140,7 +140,7 @@ class MinesweeperGrid(context: Context, attrs: AttributeSet) : GridLayout(contex
             }
 
             if (revealedCount == numRows * numCols - numMines) {
-                showGameOverMessage(context.getString(R.string.game_won_message))
+                showMessage(context.getString(R.string.game_won_message))
             }
         }
         else {
@@ -150,7 +150,7 @@ class MinesweeperGrid(context: Context, attrs: AttributeSet) : GridLayout(contex
             calculateAdjacentMines()
 
             if (revealedCount == numRows * numCols - numMines) {
-                showGameOverMessage(context.getString(R.string.game_won_message))
+                showMessage(context.getString(R.string.game_won_message))
             }
         }
     }
@@ -166,17 +166,17 @@ class MinesweeperGrid(context: Context, attrs: AttributeSet) : GridLayout(contex
     fun handleCellLongClick(row: Int, col: Int) {
         val cell = grid[row][col]
         if (!cell.isRevealed && isFlaggingModeEnabled) {
-            if (cell.text == "" && flagsRemaining > 0 && cell.isMine) {
-                cell.text = "F"
+            if (cell.text == context.getString(R.string.empty_string) && flagsRemaining > 0 && cell.isMine) {
+                cell.text = context.getString(R.string.Flag_string)
                 cell.setTextColor(Color.RED)
                 cell.setBackgroundColor(Color.YELLOW) // Set flagged cell background color
                 flagsRemaining--
             } else if (!cell.isMine) {
                 revealMines()
-                showGameOverMessage(context.getString(R.string.game_over_message2))
-            } else if (cell.text == "F") {
-                cell.text = ""
-                cell.setBackgroundColor(Color.parseColor("#B0C4DE")) // Reset to original cell color
+                showMessage(context.getString(R.string.game_over_message2))
+            } else if (cell.text == context.getString(R.string.Flag_string)) {
+                cell.text = context.getString(R.string.empty_string)
+                cell.setBackgroundColor(Color.parseColor(context.getString(R.string.steel_blue)) )// Reset to original cell color
                 flagsRemaining++
             }
         }
@@ -204,7 +204,7 @@ class MinesweeperGrid(context: Context, attrs: AttributeSet) : GridLayout(contex
     }
 
     // Function to show game over message
-    private fun showGameOverMessage(message: String) {
+    private fun showMessage(message: String) {
         val toast = Toast.makeText(context, message, Toast.LENGTH_LONG)
         toast.setGravity(Gravity.CENTER, 0, 0)
         toast.show()

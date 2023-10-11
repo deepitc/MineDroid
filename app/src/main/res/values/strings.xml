@@ -3,11 +3,16 @@
     <string name="game_over_message2">Game Over! You flagged an empty box.</string>
     <string name="game_won_message">Congratulations! You won the game!</string>
     <string name="instructions">Instructions:</string>
-    <string name="welcome_message">Welcome to Minedroid Game!</string>
+    <string name="welcome_message">Welcome to Minedroid!</string>
     <string name="instruction_1">• Tap on a cell to uncover it</string>
     <string name="instruction_2">• Enable Flagging &amp; Long press to flag mine</string>
     <string name="instruction_3">• Tap numbers and empty spaces to win</string>
     <string name="reset_button">Reset Board</string>
     <string name="flag_mode">Enable Flagging Mode</string>
     <string name="game_over_message_case1">Game Over! You stepped on a mine.</string>
+    <string name="disable_flagging">Disable Flagging Mode</string>
+    <string name="enable_flagging">Enable Flagging Mode</string>
+    <string name="Flag_string">F</string>
+    <string name="Mine_string">X</string>
+    <string name="empty_string" />
 </resources>

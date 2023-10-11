@@ -25,9 +25,9 @@ class MainActivity : AppCompatActivity() {
         flagButton.setOnClickListener {
             flaggingModeEnabled = !flaggingModeEnabled
             if (flaggingModeEnabled) {
-                flagButton.text = "Disable Flagging Mode"
+                flagButton.text = getString(R.string.disable_flagging)
             } else {
-                flagButton.text = "Enable Flagging Mode"
+                flagButton.text = getString(R.string.enable_flagging)
             }
             minesweeperGrid.setFlaggingModeEnabled(flaggingModeEnabled)
         }
